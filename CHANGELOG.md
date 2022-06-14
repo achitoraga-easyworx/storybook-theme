@@ -1,3 +1,15 @@
+# v0.0.2 (Tue Jun 14 2022)
+
+#### ⚠️ Pushed to `main`
+
+- remove welcome js (alexandru.chitoraga@gmail.com)
+
+#### Authors: 1
+
+- Alexandru Chitoraga (alexandru.chitoraga@gmail.com)
+
+---
+
 # v0.0.1 (Tue Jun 14 2022)
 
 #### ⚠️ Pushed to `main`
