@@ -2,6 +2,21 @@
 
 #### ⚠️ Pushed to `main`
 
+- basic update ([@alexchitoraga](https://github.com/alexchitoraga))
+- add .idea to gitignore ([@alexchitoraga](https://github.com/alexchitoraga))
+- Initial commit ([@achitoraga-easyworx](https://github.com/achitoraga-easyworx))
+
+#### Authors: 2
+
+- [@achitoraga-easyworx](https://github.com/achitoraga-easyworx)
+- Alexandru Chitoraga ([@alexchitoraga](https://github.com/alexchitoraga))
+
+---
+
+# v0.0.1 (Tue Jun 14 2022)
+
+#### ⚠️ Pushed to `main`
+
 - add .idea to gitignore (alexandru.chitoraga@gmail.com)
 - Initial commit ([@achitoraga-easyworx](https://github.com/achitoraga-easyworx))
 
