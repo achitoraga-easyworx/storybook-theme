@@ -1,7 +1,7 @@
 {
-  "name": "storybook-addon-kit",
+  "name": "storybook-addon-styled-system-theme",
   "version": "0.0.0",
-  "description": "everything you need to build a Storybook addon",
+  "description": "Style-system theme addon for storybook",
   "keywords": [
     "storybook-addons"
   ],
@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/storybookjs/storybook-addon-kit"
   },
-  "author": "package-author",
+  "author": "Alex Chitoraga",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -80,7 +80,7 @@
     "access": "public"
   },
   "storybook": {
-    "displayName": "Addon Kit",
+    "displayName": "Styled-System Theme Addon",
     "supportedFrameworks": [
       "supported-frameworks"
     ],
