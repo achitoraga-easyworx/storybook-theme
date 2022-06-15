@@ -1,3 +1,15 @@
+# v0.0.7 (Wed Jun 15 2022)
+
+#### ⚠️ Pushed to `main`
+
+- add pixel perfect logic (alexandru.chitoraga@gmail.com)
+
+#### Authors: 1
+
+- Alexandru Chitoraga (alexandru.chitoraga@gmail.com)
+
+---
+
 # v0.0.6 (Tue Jun 14 2022)
 
 #### ⚠️ Pushed to `main`
