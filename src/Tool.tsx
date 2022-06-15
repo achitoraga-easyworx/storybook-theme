@@ -1,18 +1,17 @@
 import React, { useEffect } from "react";
 import { useGlobals, useParameter } from "@storybook/api";
 import { IconButton, Icons, IconsProps, TooltipLinkList, WithTooltip } from "@storybook/components";
-
-type Theme = 'light' | 'dark' | 'vertical' | 'horizontal'
+import { ThemeParameter, ThemeVariant } from "./types";
 
 export const Tool = () => {
-  const theme = useParameter('theme')
+  const theme = useParameter<ThemeParameter>('theme')
   const [{ themeGlobal }, updateGlobals] = useGlobals();
 
   useEffect(() => {
-    setTheme(theme as Theme)
-  }, [theme])
+    setTheme(theme?.theme)
+  }, [theme?.theme])
 
-  function setTheme(mode?: 'light' | 'dark' | 'vertical' | 'horizontal') {
+  function setTheme(mode?: ThemeVariant) {
     updateGlobals({ themeGlobal: mode })
   }
 

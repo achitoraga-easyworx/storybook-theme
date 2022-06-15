@@ -10,7 +10,13 @@ export default {
   <SomeOtherComponent funcProp={(a) => a.id} />
 </MyComponent>
 `,
-    theme: 'vertical',
+    theme: {
+      theme: 'vertical',
+      background: {
+        light: 'white',
+        dark: 'black',
+      }
+    },
   },
 };
 
