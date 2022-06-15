@@ -1,3 +1,15 @@
+# v0.0.6 (Tue Jun 14 2022)
+
+#### ⚠️ Pushed to `main`
+
+- upgrade theme parameters ([@alexchitoraga](https://github.com/alexchitoraga))
+
+#### Authors: 1
+
+- Alexandru Chitoraga ([@alexchitoraga](https://github.com/alexchitoraga))
+
+---
+
 # v0.0.5 (Tue Jun 14 2022)
 
 #### ⚠️ Pushed to `main`
