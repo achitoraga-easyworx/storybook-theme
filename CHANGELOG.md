@@ -2,6 +2,19 @@
 
 #### ⚠️ Pushed to `main`
 
+- add yarn error log ([@alexchitoraga](https://github.com/alexchitoraga))
+- add basic theme decorators ([@alexchitoraga](https://github.com/alexchitoraga))
+
+#### Authors: 1
+
+- Alexandru Chitoraga ([@alexchitoraga](https://github.com/alexchitoraga))
+
+---
+
+# v0.0.3 (Tue Jun 14 2022)
+
+#### ⚠️ Pushed to `main`
+
 - add basic theme decorators ([@alexchitoraga](https://github.com/alexchitoraga))
 
 #### Authors: 1
