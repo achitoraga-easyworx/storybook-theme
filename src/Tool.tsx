@@ -1,31 +1,52 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useGlobals } from "@storybook/api";
-import { Icons, IconButton } from "@storybook/components";
-import { TOOL_ID } from "./constants";
+import { IconButton, Icons, TooltipLinkList, WithTooltip } from "@storybook/components";
 
 export const Tool = () => {
-  const [{ myAddon }, updateGlobals] = useGlobals();
+  const [{ themeMode }, updateGlobals] = useGlobals();
 
-  const toggleMyTool = useCallback(
-    () =>
-      updateGlobals({
-        myAddon: myAddon ? undefined : true,
-      }),
-    [myAddon]
-  );
+  function setTheme(mode: 'light' | 'dark') {
+    updateGlobals({ themeMode: mode })
+  }
 
   return (
-    <IconButton
-      key={TOOL_ID}
-      active={myAddon}
-      title="Enable my addon"
-      onClick={toggleMyTool}
-    >
-      {/*
+    <div>
+      <WithTooltip
+        tooltip={({ onHide }) => <TooltipLinkList
+          links={[{
+            id: '1',
+            title: 'Light',
+            left: <Icons icon={'circle'} />, onClick() {
+              setTheme('light')
+              onHide()
+            },
+            active: themeMode === 'light'
+          }, {
+            id: '2',
+            title: 'Dark',
+            left: <Icons icon={'circle'} />, onClick() {
+              setTheme('dark')
+              onHide()
+            },
+            active: themeMode === 'dark'
+          }]}
+        />}
+        placement={'top'}
+        trigger={'click'}
+        closeOnClick
+      >
+        <IconButton
+          key={12}
+          title="Theme Light"
+          active={themeMode}
+        >
+          {/*
         Checkout https://next--storybookjs.netlify.app/official-storybook/?path=/story/basics-icon--labels
         for the full list of icons
       */}
-      <Icons icon="lightning" />
-    </IconButton>
+          <Icons icon="circlehollow" />
+        </IconButton>
+      </WithTooltip>
+    </div>
   );
 };

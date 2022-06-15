@@ -4,6 +4,7 @@ import { useEffect, useGlobals } from "@storybook/addons";
 export const withGlobals: DecoratorFunction = (StoryFn, context) => {
   const [{ myAddon }] = useGlobals();
   // Is the addon being used in the docs panel
+
   const isInDocs = context.viewMode === "docs";
 
   useEffect(() => {
