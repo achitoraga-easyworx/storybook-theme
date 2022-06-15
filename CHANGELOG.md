@@ -1,3 +1,15 @@
+# v0.0.5 (Tue Jun 14 2022)
+
+#### ⚠️ Pushed to `main`
+
+- refactor theme decorator (alexandru.chitoraga@gmail.com)
+
+#### Authors: 1
+
+- Alexandru Chitoraga (alexandru.chitoraga@gmail.com)
+
+---
+
 # v0.0.4 (Tue Jun 14 2022)
 
 
