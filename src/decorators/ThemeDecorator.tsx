@@ -1,30 +1,23 @@
-import React, { FC } from "react";
+import React from "react";
 import { DecoratorFunction } from "@storybook/addons";
-import { ThemeProvider } from "styled-components";
-import { Box } from "rebass";
 import { ThemeParameter } from "../types";
+import ThemeContainer from "../components/ThemeContainer";
 
 const ThemeDecorator: DecoratorFunction = (story, context) => {
-  const { themeGlobal } = context.globals as { themeGlobal: 'dark' | 'light' }
+  const { themeGlobal, pixelPerfect } = context.globals as { themeGlobal: 'dark' | 'light', pixelPerfect?: boolean }
   const { theme } = context.parameters as { theme: ThemeParameter }
 
   const localTheme = themeGlobal ?? theme?.theme ?? 'light'
 
-  const ThemeBox: FC<{ localTheme: 'light' | 'dark' }> = ({ children, localTheme }) => (
-    <ThemeProvider theme={theme?.themes?.[localTheme] ?? {}}>
-      <Box bg={theme?.background?.[localTheme]} p={25}>{children}</Box>
-    </ThemeProvider>
-  )
-
   if (localTheme === 'light' || localTheme === 'dark') {
-    return <ThemeBox localTheme={localTheme}>{story()}</ThemeBox>
+    return <ThemeContainer theme={theme} mode={localTheme} pixel={pixelPerfect}>{story()}</ThemeContainer>
   }
 
   if (localTheme === 'vertical') {
     return (
       <div>
-        <ThemeBox localTheme={'light'}>{story()}</ThemeBox>
-        <ThemeBox localTheme={'dark'}>{story()}</ThemeBox>
+        <ThemeContainer theme={theme} mode={'light'} pixel={pixelPerfect}>{story()}</ThemeContainer>
+        <ThemeContainer theme={theme} mode={'dark'} pixel={pixelPerfect}>{story()}</ThemeContainer>
       </div>
     )
   }
@@ -32,8 +25,8 @@ const ThemeDecorator: DecoratorFunction = (story, context) => {
   if (localTheme === 'horizontal') {
     return (
       <div style={{ display: 'grid', gridTemplateColumns: '50% 50%' }}>
-        <ThemeBox localTheme={'light'}>{story()}</ThemeBox>
-        <ThemeBox localTheme={'dark'}>{story()}</ThemeBox>
+        <ThemeContainer theme={theme} mode={'light'} pixel={pixelPerfect}>{story()}</ThemeContainer>
+        <ThemeContainer theme={theme} mode={'dark'} pixel={pixelPerfect}>{story()}</ThemeContainer>
       </div>
     )
   }

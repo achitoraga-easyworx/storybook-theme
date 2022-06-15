@@ -83,10 +83,6 @@ export const Tool = () => {
         title="Theme Light"
         active={themeGlobal}
       >
-        {/*
-        Checkout https://next--storybookjs.netlify.app/official-storybook/?path=/story/basics-icon--labels
-        for the full list of icons
-      */}
         <Icons icon="circlehollow" />
       </IconButton>
     </WithTooltip>
