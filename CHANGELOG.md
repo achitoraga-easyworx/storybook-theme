@@ -1,3 +1,15 @@
+# v0.0.8 (Thu Jun 16 2022)
+
+#### ⚠️ Pushed to `main`
+
+- add styling for theme decorator ([@alexchitoraga](https://github.com/alexchitoraga))
+
+#### Authors: 1
+
+- Alexandru Chitoraga ([@alexchitoraga](https://github.com/alexchitoraga))
+
+---
+
 # v0.0.7 (Wed Jun 15 2022)
 
 #### ⚠️ Pushed to `main`
