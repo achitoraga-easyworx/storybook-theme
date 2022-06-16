@@ -1,25 +1,20 @@
 import React, { useEffect } from "react";
 import { useGlobals, useParameter } from "@storybook/api";
-import { IconButton, Icons, IconsProps, TooltipLinkList, WithTooltip } from "@storybook/components";
-import { ThemeParameter, ThemeVariant } from "./types";
+import { IconButton, Icons, TooltipLinkList, WithTooltip } from "@storybook/components";
+import { ThemeMode, ThemeParameter } from "../types";
+import TooltipLinkIcon from "../components/TooltipLinkIcon";
 
-export const Tool = () => {
-  const theme = useParameter<ThemeParameter>('theme')
+export const ThemeTool = () => {
+  const theme = useParameter<ThemeParameter['theme']>('theme')
   const [{ themeGlobal }, updateGlobals] = useGlobals();
 
   useEffect(() => {
-    setTheme(theme?.theme)
-  }, [theme?.theme])
+    setTheme(theme?.mode)
+  }, [theme?.mode])
 
-  function setTheme(mode?: ThemeVariant) {
+  function setTheme(mode?: ThemeMode) {
     updateGlobals({ themeGlobal: mode })
   }
-
-  const Icon: React.FC<{ icon: IconsProps['icon'] }> = ({ icon }) => (
-    <div style={{ width: '15px' }}>
-      <Icons icon={icon} />
-    </div>
-  )
 
   return (
     <WithTooltip
@@ -28,7 +23,7 @@ export const Tool = () => {
           {
             id: 'default',
             title: 'Default',
-            left: <Icon icon={'power'} />, onClick() {
+            left: <TooltipLinkIcon icon={'power'} />, onClick() {
               setTheme(undefined)
               onHide()
             },
@@ -39,7 +34,7 @@ export const Tool = () => {
           {
             id: 'light',
             title: 'Light',
-            left: <Icon icon={'circlehollow'} />, onClick() {
+            left: <TooltipLinkIcon icon={'circlehollow'} />, onClick() {
               setTheme('light')
               onHide()
             },
@@ -48,7 +43,7 @@ export const Tool = () => {
           {
             id: 'dark',
             title: 'Dark',
-            left: <Icon icon={'circle'} />, onClick() {
+            left: <TooltipLinkIcon icon={'circle'} />, onClick() {
               setTheme('dark')
               onHide()
             },
@@ -57,7 +52,7 @@ export const Tool = () => {
           {
             id: 'vertical',
             title: 'Vertical',
-            left: <Icon icon={'arrowdown'} />, onClick() {
+            left: <TooltipLinkIcon icon={'arrowdown'} />, onClick() {
               setTheme('vertical')
               onHide()
             },
@@ -66,7 +61,7 @@ export const Tool = () => {
           {
             id: 'horizontal',
             title: 'Horizontal',
-            left: <Icon icon={'arrowleft'} />, onClick() {
+            left: <TooltipLinkIcon icon={'arrowleft'} />, onClick() {
               setTheme('horizontal')
               onHide()
             },

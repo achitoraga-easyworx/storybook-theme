@@ -6,32 +6,32 @@ export default {
     component: Button,
     parameters: {
         theme: {
-            theme: 'horizontal',
+            mode: 'horizontal',
             background: {
                 light: 'white',
                 dark: 'black',
             },
-            design: {
-                breakpoint: 500,
-                desktop: {
-                    light: 'https://www.syncfusion.com/blogs/wp-content/uploads/2018/08/blogbutton_3b87bbde.png',
-                    dark: 'https://www.syncfusion.com/blogs/wp-content/uploads/2018/08/blogbutton_3b87bbde.png',
-                    style: {
-                        bg: {
-                            top: 30
-                        }
+        },
+        pixelPerfect: {
+            breakpoint: 500,
+            desktop: {
+                light: 'https://www.syncfusion.com/blogs/wp-content/uploads/2018/08/blogbutton_3b87bbde.png',
+                dark: 'https://www.syncfusion.com/blogs/wp-content/uploads/2018/08/blogbutton_3b87bbde.png',
+                style: {
+                    bg: {
+                        top: 30
                     }
-                },
-                mobile: {
-                    light: 'https://www.syncfusion.com/blogs/wp-content/uploads/2018/08/blogbutton_3b87bbde.png',
-                    dark: 'https://www.syncfusion.com/blogs/wp-content/uploads/2018/08/blogbutton_3b87bbde.png',
-                    style: {
-                        bg: {
-                            top: -30
-                        }
+                }
+            },
+            mobile: {
+                light: 'https://www.syncfusion.com/blogs/wp-content/uploads/2018/08/blogbutton_3b87bbde.png',
+                dark: 'https://www.syncfusion.com/blogs/wp-content/uploads/2018/08/blogbutton_3b87bbde.png',
+                style: {
+                    bg: {
+                        top: -30
                     }
-                },
-            }
+                }
+            },
         },
     },
 };

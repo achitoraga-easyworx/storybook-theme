@@ -1,33 +1,33 @@
 import React, { FC } from "react";
-import { Box } from "rebass";
 import PixelDecorator from "../decorators/PixelDecorator";
 import { ThemeProvider } from "styled-components";
-import { ThemeParameter } from "../types";
+import { PixelPerfectParameter, ThemeParameter, ThemeVariant } from "../types";
 
 type Props = {
-  theme?: ThemeParameter
-  mode: 'light' | 'dark'
-  pixel?: boolean
+  theme?: ThemeParameter['theme']
+  pixelPerfect?: PixelPerfectParameter['pixelPerfect']
+  mode: ThemeVariant
+  showPixelPerfect?: boolean
 }
 
-const ThemeContainer: FC<Props> = ({ theme, children, mode, pixel }) => {
+const ThemeContainer: FC<Props> = ({ theme, children, mode, showPixelPerfect, pixelPerfect }) => {
   return (
     <ThemeProvider theme={theme?.themes?.[mode] ?? {}}>
-      <Box bg={theme?.background?.[mode]} p={25}>
-        {pixel ? (
+      <div style={{ backgroundColor: theme?.background?.[mode], padding: 25, ...theme?.style }}>
+        {showPixelPerfect ? (
           <PixelDecorator
-            desktop={theme?.design?.desktop?.[mode] ?? ''}
-            mobile={theme?.design?.mobile?.[mode] ?? ''}
-            breakpoint={theme?.design?.breakpoint ?? 500}
-            desktopBgStyle={theme?.design?.desktop?.style?.bg}
-            desktopStoryStyle={theme?.design?.desktop?.style?.story}
-            mobileBgStyle={theme?.design?.mobile?.style?.bg}
-            mobileStoryStyle={theme?.design?.mobile?.style?.story}
+            desktop={pixelPerfect?.desktop?.[mode] ?? ''}
+            mobile={pixelPerfect?.mobile?.[mode] ?? ''}
+            breakpoint={pixelPerfect?.breakpoint ?? 500}
+            desktopBgStyle={pixelPerfect?.desktop?.style?.bg}
+            desktopStoryStyle={pixelPerfect?.desktop?.style?.story}
+            mobileBgStyle={pixelPerfect?.mobile?.style?.bg}
+            mobileStoryStyle={pixelPerfect?.mobile?.style?.story}
           >
             {children}
           </PixelDecorator>
         ) : children}
-      </Box>
+      </div>
     </ThemeProvider>
   )
 }

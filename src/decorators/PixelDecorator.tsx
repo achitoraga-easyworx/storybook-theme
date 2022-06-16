@@ -4,6 +4,16 @@ type Props = {
   desktop: string
   mobile: string
   breakpoint: number
+  style?: {
+    bg?: {
+      desktop?: CSSProperties
+      mobile?: CSSProperties
+    },
+    story?: {
+      desktop?: CSSProperties
+      mobile?: CSSProperties
+    }
+  }
   desktopBgStyle?: CSSProperties
   mobileBgStyle?: CSSProperties
   desktopStoryStyle?: CSSProperties

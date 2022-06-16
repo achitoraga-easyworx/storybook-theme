@@ -3,14 +3,14 @@ import { IconButton, Icons } from "@storybook/components";
 import { useGlobals } from "@storybook/api";
 
 const PixelPerfectTool = () => {
-  const [{ pixelPerfect }, updateGlobals] = useGlobals();
+  const [{ pixelPerfectGlobal }, updateGlobals] = useGlobals();
 
   return (
     <IconButton
-      key={12}
-      title="Theme Light"
-      active={pixelPerfect}
-      onClick={() => updateGlobals({ pixelPerfect: !pixelPerfect })}
+      key={'pixel-perfect'}
+      title="Pixel Perfect"
+      active={pixelPerfectGlobal}
+      onClick={() => updateGlobals({ pixelPerfectGlobal: !pixelPerfectGlobal })}
     >
       <Icons icon="contrast" />
     </IconButton>
