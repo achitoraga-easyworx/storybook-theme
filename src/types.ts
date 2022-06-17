@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 
-export type ThemeMode = 'light' | 'dark' | 'vertical' | 'horizontal'
+export type ThemeMode = 'light' | 'dark' | 'vertical' | 'horizontal' | null
 
 export type ThemeVariant = 'light' | 'dark'
 

@@ -7,7 +7,7 @@ const ThemeDecorator: DecoratorFunction = (story, context) => {
   const { themeGlobal, pixelPerfectGlobal } = context.globals as AddonGlobals
   const { theme, pixelPerfect } = context.parameters as AddonParameters
 
-  const themeCurrent = themeGlobal ?? theme?.mode ?? 'light'
+  const themeCurrent = themeGlobal ?? theme?.mode
 
   const LocalContainer: FC<{ mode: ThemeVariant }> = ({ mode }) => {
     return (

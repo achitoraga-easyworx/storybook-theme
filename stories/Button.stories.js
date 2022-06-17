@@ -43,6 +43,11 @@ Primary.args = {
     primary: true,
     label: "Button",
 };
+Primary.parameters = {
+    theme: {
+        mode: null
+    }
+}
 
 export const Secondary = Template.bind({});
 Secondary.args = {
