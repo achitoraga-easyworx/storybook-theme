@@ -1,3 +1,15 @@
+# v0.0.9 (Thu Jun 16 2022)
+
+#### ⚠️ Pushed to `main`
+
+- add null mode for theme ([@alexchitoraga](https://github.com/alexchitoraga))
+
+#### Authors: 1
+
+- Alexandru Chitoraga ([@alexchitoraga](https://github.com/alexchitoraga))
+
+---
+
 # v0.0.8 (Thu Jun 16 2022)
 
 #### ⚠️ Pushed to `main`
