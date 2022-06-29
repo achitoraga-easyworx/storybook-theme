@@ -1,3 +1,16 @@
+# v0.0.10 (Wed Jun 29 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Fix closing tag (alexandru.chitoraga@gmail.com)
+- Update theme to use stitches (alexandru.chitoraga@gmail.com)
+
+#### Authors: 1
+
+- Alexandru Chitoraga (alexandru.chitoraga@gmail.com)
+
+---
+
 # v0.0.9 (Thu Jun 16 2022)
 
 #### ⚠️ Pushed to `main`
