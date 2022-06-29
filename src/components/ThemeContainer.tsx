@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import PixelDecorator from "../decorators/PixelDecorator";
-import { ThemeProvider } from "styled-components";
 import { PixelPerfectParameter, ThemeParameter, ThemeVariant } from "../types";
 
 type Props = {
@@ -12,7 +11,7 @@ type Props = {
 
 const ThemeContainer: FC<Props> = ({ theme, children, mode, showPixelPerfect, pixelPerfect }) => {
   return (
-    <ThemeProvider theme={theme?.themes?.[mode] ?? {}}>
+    <div className={theme?.themes?.[mode] ?? {}}>
       <div style={{ backgroundColor: theme?.background?.[mode], padding: 25, ...theme?.style }}>
         {showPixelPerfect ? (
           <PixelDecorator
